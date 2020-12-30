@@ -7,12 +7,12 @@ This API contains 1600+ beautiful quotes and each quote is more deeper than the 
 > Sample Snippet how to use in your project.
 
 ```
-  const loadAPI = async () => {
-    const data = await fetch('https://raw.githubusercontent.com/kunatastic/quote-api/main/data.json');
-    const quote = await data.json();
-    console.log(quote);
-  }
-  loadAPI();
+  const fetchAPI = async () => {
+  const data = await fetch("https://type.fit/api/quotes");
+  const quotes = await data.json();
+  console.log(quotes);
+};
+fetchAPI()
 ```
 
 > Credits
