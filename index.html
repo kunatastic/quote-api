@@ -13,13 +13,36 @@
     box-sizing: border-box;
   }
 
+  body {
+    padding: 1em;
+  }
+
   a {
     text-decoration: none;
+  }
+
+
+  li {
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
   }
 </style>
 
 <body>
-  <h3>Deployed the API on my one GIT. Original API <a href="https://type.fit/api/quotes">Click here</a></h3>
+  <li>Deployed of the API on GIT. Original API <a href="https://type.fit/api/quotes">Click here</a></li>
+  <li>Check Console for the data</li>
+  <li>Link to my api <a href="https://raw.githubusercontent.com/kunatastic/quote-api/main/data.json">Click here</a></li>
 </body>
+
+<script>
+  const find = async () => {
+    const data = await fetch('https://raw.githubusercontent.com/kunatastic/quote-api/main/data.json');
+    const quote = await data.json();
+    console.log(quote);
+  }
+
+  find();
+</script>
 
 </html>
