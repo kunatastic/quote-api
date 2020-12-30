@@ -23,7 +23,7 @@
 
 
   li {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 700;
   }
@@ -36,13 +36,12 @@
 </body>
 
 <script>
-  const find = async () => {
+  const loadAPI = async () => {
     const data = await fetch('https://raw.githubusercontent.com/kunatastic/quote-api/main/data.json');
     const quote = await data.json();
     console.log(quote);
   }
-
-  find();
+  loadAPI();
 </script>
 
 </html>
