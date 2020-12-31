@@ -1,5 +1,5 @@
 const fetchAPI = async () => {
-  const data = await fetch("https://type.fit/api/quotes");
+  const data = await fetch("https://raw.githubusercontent.com/kunatastic/quote-api/main/data.json");
   const quotes = await data.json();
   localStorage.setItem("quotes", JSON.stringify(quotes));
   extract(quotes);
